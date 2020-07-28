@@ -2,25 +2,39 @@
 
 // //task 1
 // const name = "Генератор защитного поля";
-// console.log(name);
 // let price = 1000;
-// console.log(`Выбран "${name}", стоимость-${price}.`);
-// price = 1000;
-// console.log(`Выбран "${name}", стоимость-${price}.`);
+// console.log(`Выбран "${name}", стоимость-${price}. Кркдитов`);
+// price = 2000;
+// console.log(`Выбран "${name}", стоимость-${price}. Кредитов`);
 
 // //task 2
 // const total = 100;
-// const ordered = 50;
-// if (total > ordered) {
-//   console.log("Закааз выполнен, с вами свяжеться менеджер.");
+// let ordered = 50;
+// if (total >= ordered) {
+//   console.log("Заказ выполнен, с вами свяжется менеджер.");
+// } else {
+//   console.log("Не хватает товаров на складе!");
+// }
+
+// ordered = 130;
+// if (total >= ordered) {
+//   console.log("Заказ выполнен, с вами свяжется менеджер.");
+// } else {
+//   console.log("Не хватает товаров на складе!");
+// }
+
+// ordered = 100;
+// if (total >= ordered) {
+//   console.log("Заказ выполнен, с вами свяжется менеджер.");
 // } else {
 //   console.log("Не хватает товаров на складе!");
 // }
 
 // //task 3
 // const ADMIN_PASSWORD = "jqueryismyjam";
-// let message = +prompt("Ведите пароль.");
-// if ((message = ADMIN_PASSWORD)) {
+// let message = prompt("Ведите пароль.");
+
+// if (message === ADMIN_PASSWORD) {
 //   alert("Добро пожаловать!");
 // } else {
 //   alert("Неверный пароль!");
@@ -42,52 +56,50 @@
 //   }
 // }
 // //task 5
-// let country = prompt("Укажите страну");
+// let country = prompt("Укажите страну").toLowerCase();
 // switch (country) {
-//   case "Китай":
-//     alert(`Доставка в ${country} будет стоить 100 кредитов`);
+//   case "китай":
+//     alert(Доставка в ${country} будет стоить 100 кредитов);
 //     break;
 
-//   case "Чили":
-//     alert(`Доставка в ${country} будет стоить 250 кредитов`);
+//   case "чили":
+//     alert(Доставка в ${country} будет стоить 250 кредитов);
 //     break;
 
-//   case "Австралия":
-//     alert(`Доставка в ${country} будет стоить 170 кредитов`);
+//   case "австралия":
+//     alert(Доставка в ${country} будет стоить 170 кредитов);
 //     break;
 
-//   case "Индия":
-//     alert(`Доставка в ${country} будет стоить 80 кредитов`);
+//   case "индия":
+//     alert(Доставка в ${country} будет стоить 80 кредитов);
 //     break;
 
-//   case "Ямайка":
-//     alert(`Доставка в ${country} будет стоить 120 крдитов`);
+//   case "ямайка":
+//     alert(Доставка в ${country} будет стоить 120 кредитов);
 //     break;
+
 //   default:
 //     alert("В вашей стране доставка недоступна");
 // }
-// //task 6
-// let message = prompt("ВВедите число");
+
+//Task 6
+// let message = confirm("Введите число");
 // let suma = 0;
 
 // while (message) {
-//   message = prompt("Ведите исло");
+//   message = +prompt("Ведите число");
 //   suma = suma + message;
 //   console.log(suma);
 // }
-// alert("Общая сумма чисел рфвна" + suma);
+// alert("Общая сумма чисел равна: " + suma);
 
 //MODULE 2
 
 //Task 1
 const logItems = function (array) {
-  // let n = 1;
-  // for (let i of array) {
-  //   console.log(`Элемент в индексеc ${n}  - `, i);
-  //   n += 1;
-  // }
+ 
   for (let index = 0; index < array.length; index++) {
-    console.log(`Элемент в индексеc ${index + 1}  - `, array[index]);
+    console.log(`Элемент в индексе ${index + 1}  - `, array[index]);
   }
 };
 
@@ -132,6 +144,13 @@ console.log(
 const findLongestWord = function(string) {
   let splitter = string.split(" ");
   console.log(splitter);
+  let word;
+  let length;
+  for(let i = 0; i<splitter.length; i++) {
+    if(length<splitter.length){
+      word=splitter[i];
+      length = splitter[i].length;
+  }
 };
 
 
@@ -169,9 +188,7 @@ const checkForSpam = function (message) {
   }
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
+
 console.log(checkForSpam("Latest technology news")); // false
 
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
@@ -201,5 +218,5 @@ while (input) {
       alert("Было введено не число, повторите ещё раз");
     }
   }
-  numbers.push(+input);
+  numbers.push(+input);}
 }
